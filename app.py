@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for
 import sqlite3
 import datetime
+from random import randint
 
 '''import sys
 path = '/home/thepoppycat/2020_STW1'
@@ -24,7 +25,7 @@ def check():
     unit = request.form.get('unit')
     try:
         temp = float(user_temp)
-        if unit=="2":
+        if unit=="2": # Convert to celsius
             temp-=32
             temp=temp*5/9
 
@@ -41,9 +42,10 @@ def check():
         connection.commit()
         connection.close()
     except:
+        temp=randint(27, 41)
         text = "You did not input a number, try again"
     #return redirect(url_for("index", text=text, temp=temp))
-    return render_template('index.html', text=text, temp=user_temp)
+    return render_template('index.html', text=text, user_temp=user_temp, temp_celsius=temp)
 
 
 @app.route('/info')

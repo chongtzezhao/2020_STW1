@@ -48,7 +48,7 @@
         <input class="formbox" type="submit" name="submit" value="Submit">
         <div id="return">
             {% if text %}
-            <h2 style="text-align: center;">You sent: {{temp}}</h2>
+            <h2 style="text-align: center;">You sent: {{user_temp}}</h2>
             <h3>{{text}}</h3>
             {% endif %}
         </div>
@@ -70,9 +70,9 @@
 
     <script>
         var elem = document.getElementById("temp_checker");
-        var temp = "{{temp}}";
-        if(temp){
-            if(Number(temp)>=38){
+        var tempCelsius = "{{temp_celsius}}";
+        if(tempCelsius){
+            if(Number(tempCelsius)>=38){
                 elem.style.border="8px solid red";
             }
             else{
