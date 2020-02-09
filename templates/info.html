@@ -1,0 +1,61 @@
+{% extends "bootstrap.html" %}
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Galdeano' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Galdeano;
+        }
+
+        #resources {
+            margin: 0 auto;
+            width: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="resources">
+        <h1 style="text-align: center;">Relevant Information</h1>
+        <h3 style="text-align: justify; line-height: 130%;">Disclaimer: the following sites are not in any way or form endorsed or affiliated by the creator or owner of this website,
+             or by its organisation. They merely serve to provide a platform for discussion and interesting finds and events regarding
+             the 2019-nCoV. Viewer discretion is advised.</h3>
+        <ul>
+            <li>
+                <h2><a href="https://en.wikipedia.org/wiki/Novel_coronavirus_(2019-nCoV)">Wikipedia</a></h2>
+            </li>
+            <li>
+                <h2><a href="https://www.reddit.com/r/Coronavirus/">Reddit</a></h2>
+            </li>
+            <li>
+                <h2><a href="https://pandemic.internationalsos.com/2019-ncov">Pandemic International</a></h2>
+            </li>
+            <li>
+                <h2><a href="https://www.cdc.gov/coronavirus/about/prevention.html">Centers for Disease Control and Prevention</a></h2>
+            </li>
+            <li>
+                <h2>Send any questions <a href="https://www.reddit.com/r/askscience/comments/ewwmem/have_a_question_about_the_2019_novel_coronavirus/">here</a></h2>
+            </li>
+        </ul>
+    </div>
+
+    <!--div>
+			<h4>Symptoms of the 2019-nCoV are:</h4>
+    		<ul id="symptoms">
+    		    <li>High temperature (above 38°c)</li>
+    		    <li>Coughing</li>
+    		    <li>Sore throat</li>
+    		    <li>Shortness of breath</li>
+    		</ul>
+    		{% if text %}
+    		<h3>You sent: {{temp}}</h3>
+    		<h3>{{text}}</h3>
+    		{% endif %}
+        </div-->
+</body>
+{% endblock %}

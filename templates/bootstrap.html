@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coronavirus tester</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Galdeano' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            background-color: #d9d9d9;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li.navlink {
+            float: left;
+        }
+
+        li.navlink a {
+            margin-top: 15px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        li.navlink a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        .footer{
+            background-color: white;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            padding-top: 25px;
+            bottom: 0;
+            margin-bottom: 0px;
+            margin-top: 200px;
+            font-family: Galdeano;
+            font-weight: bolder;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="navbar" style="font-family: Galdeano;">
+        <li class="navlink"><a href="/" style="padding: 0px; border:0px; margin-left:20px"><img
+                    src="{{url_for('static', filename='images/logo.png')}}" style="width: 70px; height: 70px;"></a></li>
+        <li class="navlink"><a href="/interactive">Virus SIM</a></li>
+        <li class="navlink"><a href="/game">Pop the Virus</a></li>
+        <li class="navlink"><a href="/info" style="float: right;">More Info</a></li>
+    </ul>
+    {% block body %}
+
+    {% endblock %}
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    
+    <div class="footer">
+        Computing@DHS · 2020Y6
+    </div>
+</body>
+
+</html>

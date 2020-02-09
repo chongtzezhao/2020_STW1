@@ -1,0 +1,28 @@
+body {
+    font-family: Galdeano;
+}
+#temp_checker{
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border: 8px solid orange;
+}
+
+.formbox{
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#symptoms{
+    text-align: left;
+    margin: 0 auto;
+    width: 370px;
+}
+
+#return{
+    margin: 0 auto;
+    width: 40vw;
+    text-align: center;
+    line-height: 140%;
+}
