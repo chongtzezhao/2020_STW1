@@ -29,12 +29,16 @@ def check():
             temp-=32
             temp=temp*5/9
 
-        if(temp>=38):
+        if(temp>=46.11111):
+            text = "The highest recorded human temperature is 115°F or 46.1°C. Congratulations, you have broken that record :)"
+        elif temp>-38:
             text = "Your temperature is abonormally high. you may have a fever. Go drink some water and see a doctor."
-        else:
+        elif temp>=35:
             text = "You do not have a symptom of the virus. "
             text += "However, you may want to go get yourself checked if you have more than one of the symptoms below. "
             text += "Either way, rest well and drink lots of water."
+        else:
+            text = "Your core temperature has dropped below 95°F or 35°C and you have hypothermia. Go see a doctor."
         curr = datetime.datetime.now()
         connection = sqlite3.connect("sqlite.db")
         cursor = connection.cursor()
@@ -42,7 +46,7 @@ def check():
         connection.commit()
         connection.close()
     except:
-        temp=randint(27, 41)
+        temp=randint(35, 45)
         text = "You did not input a number, try again"
     #return redirect(url_for("index", text=text, temp=temp))
     return render_template('index.html', text=text, user_temp=user_temp, temp_celsius=temp)

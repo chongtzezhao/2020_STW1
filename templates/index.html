@@ -72,7 +72,7 @@
         var elem = document.getElementById("temp_checker");
         var tempCelsius = "{{temp_celsius}}";
         if(tempCelsius){
-            if(Number(tempCelsius)>=38){
+            if(Number(tempCelsius)>=38 || Number(tempCelsius)<35){
                 elem.style.border="8px solid red";
             }
             else{
